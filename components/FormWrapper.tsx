@@ -8,12 +8,12 @@ export default function FormWrapper({
   return (
     <section
       className={clsx(
-        'flex flex-col w-full h-full',
+        'flex flex-col w-full h-full ',
         'px-6 lg:px-[100px] pt-7 lg:pt-12 pb-8 lg:pb-4',
         'bg-white lg:bg-transparent rounded-lg lg:rounded-none shadow-lg lg:shadow-none'
       )}
     >
-      <h1 className="text-2xl lg:text-[34px] font-bold text-marine-blue">
+      <h1 className="text-2xl lg:text-[34px] font-bold text-greenF">
         {heading}
       </h1>
       <p className="text-cool-gray mt-1">{description}</p>

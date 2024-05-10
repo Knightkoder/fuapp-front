@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss"
+
+const config = {
+  darkMode: ["class"],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,6 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      greenF: '#00A19B',
       // Primary
       'marine-blue': 'hsl(213, 96%, 18%)',
       'purplish-blue': 'hsl(243, 100%, 62%)',
@@ -26,7 +29,11 @@ module.exports = {
       fontFamily: {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
+      backgroundImage: {
+        'home-bg': "url('/images/bg-masthead.jpg')",
+      }
     },
-  },
-  plugins: [],
-};
+  }
+} satisfies Config
+
+export default config

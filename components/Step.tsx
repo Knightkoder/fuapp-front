@@ -19,7 +19,7 @@ export default function Step({ step, segment }: StepProps) {
   // };
 
   return (
-    <Link href={`/${step.segment}`}>
+    <Link href={`/cotiza/${step.segment}`}>
       {/* <button type="button" onClick={() => validateStep(`/${step}`)}> */}
       <div className="flex items-center gap-4">
         <button
@@ -35,8 +35,8 @@ export default function Step({ step, segment }: StepProps) {
           {step.number}
         </button>
         <div className="hidden lg:flex flex-col uppercase">
-          <h3 className={clsx('font-normal text-[13px] text-cool-gray')}>
-            Step {step.number}
+          <h3 className={clsx('font-normal text-[13px] text-zinc-100')}>
+            Paso {step.number}
           </h3>
           <h2
             className={clsx(
@@ -55,8 +55,8 @@ export default function Step({ step, segment }: StepProps) {
 interface StepProps {
   step: {
     number: number;
-    segment: 'info' | 'plan' | 'addons' | 'summary';
+    segment: 'plan' | 'info' | 'addons' | 'summary';
     heading: string;
   };
-  segment: 'info' | 'plan' | 'addons' | 'summary';
+  segment: 'plan' | 'info' | 'addons' | 'summary';
 }

@@ -1,44 +1,45 @@
-'use client';
+"use client";
 
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { useSelectedLayoutSegment } from "next/navigation";
 // Components
-import Image from 'next/image';
-import Step from './Step';
+import Image from "next/image";
+import Step from "./Step";
 // Images
-import bgSidebarDesktop from '@/images/bg-sidebar-desktop.svg';
-import bgSidebarMobile from '@/images/bg-sidebar-mobile.svg';
+import bgSidebarDesktop from "@/images/bg-sidebar-desktop.svg";
+import bgSidebarMobile from "@/images/bg-sidebar-mobile.svg";
+import NextImage from "next/image";
 
 export default function Sidebar() {
   const segment = useSelectedLayoutSegment() as
-    | 'info'
-    | 'plan'
-    | 'addons'
-    | 'summary';
+    | "plan"
+    | "info"
+    | "addons"
+    | "summary";
 
   const steps: {
     number: number;
-    segment: 'info' | 'plan' | 'addons' | 'summary';
+    segment: "plan" | "info" | "addons" | "summary";
     heading: string;
   }[] = [
     {
       number: 1,
-      segment: 'info',
-      heading: 'Your Info',
+      segment: "plan",
+      heading: "Servicios",
     },
     {
       number: 2,
-      segment: 'plan',
-      heading: 'Select Plan',
+      segment: "info",
+      heading: "Tus Datos",
     },
     {
       number: 3,
-      segment: 'addons',
-      heading: 'Add-ons',
+      segment: "addons",
+      heading: "Datos Afectado",
     },
     {
       number: 4,
-      segment: 'summary',
-      heading: 'Summary',
+      segment: "summary",
+      heading: "Resumen",
     },
   ];
 
@@ -48,7 +49,7 @@ export default function Sidebar() {
 
   return (
     <div className="relative shrink-0">
-      <div className="lg:absolute lg:inset-0 lg:px-8 py-8 lg:py-10 flex flex-row justify-center lg:justify-stretch lg:flex-col gap-4 lg:gap-6">
+      <div className=" lg:absolute lg:inset-0 lg:px-8 py-8 lg:py-10 flex flex-row justify-center lg:justify-stretch lg:flex-col gap-4 lg:gap-6">
         {Steps}
       </div>
       <Image

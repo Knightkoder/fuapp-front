@@ -13,7 +13,7 @@ export default function Provider({ children }: FormProviderProps) {
     name: '',
     email: '',
     phone: '',
-    plan: 'arcade',
+    plan: 'funerario',
     billing: 'monthly',
     addons: {
       online: false,
@@ -26,9 +26,9 @@ export default function Provider({ children }: FormProviderProps) {
     const isValid = !!(data.name && data.email && data.phone);
 
     if (isValid) {
-      route.push('/thank-you');
+      route.push('/cotiza/thank-you');
     } else {
-      route.replace('/info');
+      route.replace('/cotiza/info');
     }
   };
 
